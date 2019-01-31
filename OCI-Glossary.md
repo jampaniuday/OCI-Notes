@@ -3,6 +3,8 @@
 
 Also see [OCI - Key Concepts and Terminology](https://docs.cloud.oracle.com/iaas/Content/GSG/Concepts/concepts.htm)
 
+---
+
 ## Autonomous
 
 ## ADW
@@ -12,6 +14,8 @@ Autonomous Data Warehouse
 ### ATP
 
 Autonomous Transaction Processing
+
+---
 
 ## Infrastructure Architecture
 
@@ -30,6 +34,8 @@ See Availability Domain
 Geographical Data Center Location
 
 See Availability Domain and Fault Domain
+
+---
 
 ## General
 
@@ -59,6 +65,8 @@ Each OCI Resource is identified by a unique OCID
 
 When you sign up for Oracle Cloud Infrastructure, Oracle creates a tenancy for your company, which is a secure and isolated partition within Oracle Cloud Infrastructure where you can create, organize, and administer your cloud resources.
 
+---
+
 ## Networking
 
 ### Off Box Networking
@@ -79,6 +87,8 @@ Virtual Cloud Network
 
 Virtual Private Network
 
+---
+
 ## Security
 
 Be default, everything is denied.  There are no default privileges
@@ -96,6 +106,10 @@ Collection of users that need same type of access to a Resource or set of Resour
 ### IAM
 
 Identity and Access Management
+
+### IdP
+
+Identity Provider - used at sign in to the console. This is Oracle Identity Cloud Service by default.
 
 ### Instance Principals
 
