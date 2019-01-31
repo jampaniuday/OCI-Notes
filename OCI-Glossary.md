@@ -75,9 +75,19 @@ Networking optimized to push networking from the Virtual Layer to the Hardware l
 
 The performance impact imposed by VM use is very low
 
+### Internet Gateway
+
+A path for network traffic between your VCN and the internet
+
+Only 1 Internet Gateway is allowed per VCN
+
 ### LB
 
 Load Balancing
+
+### Route Table
+
+Route Traffic out of the VCN
 
 ### VCN
 
