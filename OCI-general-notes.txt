@@ -5,11 +5,5 @@ General Notes
 
 ###############################################################################
 
-Install Git on Windows
-From Git Bash
-
-ssh-keygen -t rsa -b 4096 -C "jkstill@gmail.com" -N '' -f C:/Users/still/.ssh/id_rsa_github_win
-
-
  
  
