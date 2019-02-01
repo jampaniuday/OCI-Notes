@@ -69,29 +69,85 @@ When you sign up for Oracle Cloud Infrastructure, Oracle creates a tenancy for y
 
 ## Networking
 
+### Dynamic Routing Gateway
+
+A virtual router used to route traffic to destinations other than the internet.
+
+### FastConnect
+
+A direct and private connection between OCI and your non-OCI Data Center.
+
+### Local Peering Gateway
+
+An LPG is used to connect two VCNs in the same region.
+
+See VCN Peering
+
+### Internet Gateway
+
+A path for network traffic between your VCN and the internet
+
+Allows outbound connections and incoming connections
+
+Only 1 Internet Gateway is allowed per VCN
+
+### NAT Gateway
+
+A path for network traffic between your VCN and the internet.
+
+Allows iniating traffic from the VCN only.
+
+Allow Private Subnets to reach the Internet
+
+Use case:  getting patches, updates, etc.
+
+### LB
+
+Load Balancing
+
 ### Off Box Networking
 
 Networking optimized to push networking from the Virtual Layer to the Hardware layear.
 
 The performance impact imposed by VM use is very low
 
-### Internet Gateway
+### Remote Peering Connection
 
-A path for network traffic between your VCN and the internet
+An RPC is used to connect two VCNs in the different regions; it is created on a Dynamic Routing Gateway (DRG)
 
-Only 1 Internet Gateway is allowed per VCN
+See:
 
-### LB
-
-Load Balancing
+- VCN Peering
+- See Dynamic Routing Gateway (DRG)
 
 ### Route Table
 
 Route Traffic out of the VCN
 
+### Security Lists
+
+Firewall rules per subnet allowing/disallowing network  egress/ingress from the subnet
+
+Rules may be Stateful or Stateless
+
+Security Rules are stateful by default
+
+### Service Gateway
+
+Service Gateway is a pre-existing OCI Gateway for Public OCI Services.
+
+The Service Gateway allows accessing Public OCI services (eg. Object Storage) without an Internet or NAT Gateway
+
 ### VCN
 
 Virtual Cloud Network
+
+### VCN Peering
+
+There are 2 types of VCN Peering:
+
+- local VCN Peering
+- remote VCN Peering
 
 ### VPN
 
