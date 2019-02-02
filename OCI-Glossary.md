@@ -69,6 +69,10 @@ When you sign up for Oracle Cloud Infrastructure, Oracle creates a tenancy for y
 
 ## Networking
 
+### DNS Domain Name System
+
+OCI uses its own Internal DNS
+
 ### Dynamic Routing Gateway
 
 A virtual router used to route traffic to destinations other than the internet.
@@ -76,6 +80,10 @@ A virtual router used to route traffic to destinations other than the internet.
 ### FastConnect
 
 A direct and private connection between OCI and your non-OCI Data Center.
+
+### FQDN
+
+Fully Qualified Domain Name
 
 ### Local Peering Gateway
 
@@ -110,6 +118,12 @@ Load Balancing
 Networking optimized to push networking from the Virtual Layer to the Hardware layear.
 
 The performance impact imposed by VM use is very low
+
+### Public IP Address
+
+An IP address that can be routed on the internet.
+
+Several OCI objects or services can have a Public IP Address.
 
 ### Remote Peering Connection
 

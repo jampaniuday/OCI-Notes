@@ -5,6 +5,29 @@ OCI Networking Details
 
 ---
 
+### DNS Domain Name System
+
+OCI uses its own Internal DNS
+
+Options:
+
+Internet and VCN Resolver: default choice for new VCNs
+
+Custom Resolver: lets instances resolve the hostnames in on-premise network
+
+A DNS label may be specified when creating VCN/subnets/instances
+
+DNS Names
+
+- VCN: _VCN DNS label.oraclevcn.com_
+- Subnet: _subnet DNS label.VCN DNS label.oraclevcn.com_
+- Instance FQDN: _hostname.subnet DNS label.VCN DNS label.oraclevcn.com_
+- Instance FQDN resolves to the instance's Private IP address
+
+Public IP addresses created in a VCN do not automatically get an FQDN assigned.
+
+ie. when using SSH to connect remotely, you will need to use an IP address or external-to-OCI name resolution
+
 ### Dynamic Routing Gateway
 
 Use a Dynamic Routing Gateway to route traffic to your on prem or colo, etc.
@@ -59,6 +82,29 @@ A subnet can route traffic to only 1 NAT Gateway.
 
 A Gateway is not required to access Public OCI Services such as Object Storage - see Service Gateway
 
+### Public IP Address
+
+An IP address that can be routed on the internet.
+
+Two types of Public IP:
+
+- ephemeral - exists only for the lifetime of the instance
+- reserved - persists and can be re-assigned to other instances
+
+Several OCI objects or services can have a Public IP Address.
+
+- Instance (not recommended in most cases)
+- OCI Public Load Balancer
+- - Internet Gateway
+- NAT Gateway
+- DRG – IPsec tunnels
+- Autonomous Data Warehouse
+- Autonomous Transaction Processing
+- OKE (Kubernetes) cluster master and worker nodes
+
+Public IP Addresses are assigned by Oracle and cannot be changed.
+
+
 ### Remote Peering Connectin
 
 An RPC is used to connect two VCNs in the different regions.
@@ -101,6 +147,14 @@ Routing Rules consist of:
 
 Firewall rules per subnet allowing/disallowing network  egress/ingress from the subnet
 
+Security Lists manage connectivity north-south (incoming/outgoing VCN traffic) and east-west (internal VCN traffic between multiple subnets)
+
+Each subnet may have up to 5 security lists via the Route Table.
+
+OCI follows a white-list model (you must manually specify white listed traffic flows); By default, things are locked down 
+
+Instances cannot communicate with other instances in the same Subnet, until you permit them to!
+
 Rules may be Stateful or Stateless
 
 Security Rules are stateful by default
@@ -111,8 +165,11 @@ An incoming (ingress) rule may be created for port 80 for an app running via HTT
 
 If the rule is stateful, there is no need for an egress rule to allow the outgoing responses - they are allowed by default with Stateful Rules.
 
-A Stateless Rule would not allow this outgoing response.
+A Stateless Rule would not allow this outgoing response without a corresponding egress rule.
 
+Stateless is better for any service or app generating a large number of connections, as that would be too much to track.
+
+ie. Load Balancers, Analytic queries with many connections, etc.
 
 ### Service Gateway
 
