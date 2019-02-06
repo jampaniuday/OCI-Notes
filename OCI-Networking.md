@@ -5,6 +5,12 @@ OCI Networking Details
 
 ---
 
+### BPG
+
+Border Gateway Protocol
+
+This is the protocol used to route traffic on the backbone between networks.
+
 ### DNS Domain Name System
 
 OCI uses its own Internal DNS
