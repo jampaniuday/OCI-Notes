@@ -69,6 +69,10 @@ When you sign up for Oracle Cloud Infrastructure, Oracle creates a tenancy for y
 
 ## Networking
 
+### BPG
+
+Border Gateway Protocol
+
 ### CPE
 
 Customer Premises Equipment
