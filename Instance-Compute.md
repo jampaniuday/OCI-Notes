@@ -91,6 +91,7 @@ Custom images cannot exceed 300G.
 
 Custom images supports:
 
+- Paravirtualized:  !Needs Definition!
 - Emulation Mode:  Fully emulated NIC, block boot, legacy BIOS.
 - Native Mode: Offer maximum performance with modern OS’s
 
