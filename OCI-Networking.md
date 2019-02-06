@@ -45,6 +45,9 @@ See FastConnect
 
 A direct and private connection between OCI and your non-OCI Data Center.
 
+The connection can be 1G of 10G.
+
+
 ## IP Ranges
 
 Recommendations as per RFC 1918
@@ -195,6 +198,11 @@ There are 2 types of VCN Peering:
 - local VCN Peering
 - remote VCN Peering
 
+## VPN
 
+Virtual Private Network
 
----
+OCI has two options for IPsec VPN connectivity
+
+- OCI managed VPN Service (free)
+- Software VPN (running on OCI Compute)

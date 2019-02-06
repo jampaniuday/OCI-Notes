@@ -69,6 +69,10 @@ When you sign up for Oracle Cloud Infrastructure, Oracle creates a tenancy for y
 
 ## Networking
 
+### CPE
+
+Customer Premises Equipment
+
 ### DNS Domain Name System
 
 OCI uses its own Internal DNS
@@ -166,6 +170,11 @@ There are 2 types of VCN Peering:
 ### VPN
 
 Virtual Private Network
+
+OCI has two options for IPsec VPN connectivity
+
+- OCI managed VPN Service (free)
+- Software VPN (running on OCI Compute)
 
 ---
 
