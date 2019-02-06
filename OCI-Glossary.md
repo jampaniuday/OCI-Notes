@@ -7,13 +7,25 @@ Also see [OCI - Key Concepts and Terminology](https://docs.cloud.oracle.com/iaas
 
 ## Autonomous
 
-## ADW
+### ADW
 
 Autonomous Data Warehouse
 
 ### ATP
 
 Autonomous Transaction Processing
+
+---
+
+## Compute
+
+### Bare Metal
+
+As it says, running on a physical server.  0% overhead due to running in the cloud
+
+### Virtual Machine
+
+A compute instance (eg Linux) running on a hypervisor.
 
 ---
 
