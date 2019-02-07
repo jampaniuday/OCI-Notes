@@ -294,6 +294,10 @@ The amount of time required to service a request.  < 1 millisecond for NVMe
 
 Non-Volatile Memory Express.  Fast SSD that is attached directly to the PCIe bus.
 
+### Object Storage
+
+High performance storage for an unlimited amount of unstructured data.
+
 ### PCIe
 
 Peripheral Component Interconnect Express bus

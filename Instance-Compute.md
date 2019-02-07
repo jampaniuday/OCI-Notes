@@ -112,10 +112,3 @@ A Pool allows provising and creating multiple instances based on the same Instan
 Pool:Congiguration is 1:1
 
 A single Configuration may be used on multiple pools.
-
-
-
-
-
-
-
