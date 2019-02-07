@@ -257,3 +257,52 @@ Some IAM entity that is allowed to interact with OCI Resources
 IAM users and Instance Principals
 
 The Principal may be a User Account or an Application
+
+---
+
+## Storage
+
+### Block Storage Types
+
+Block Volumes and Local Storage on OCI are NVMe based and are organized into 4k blocks.
+
+## Boot Volume
+
+Boot Volumes persist instance termination, and may be used to start a new instance, or to stop an instance, scale it larger and restart.
+
+### Clone
+
+Block Volumes may be cloned via disk to disk copy.
+
+## Crash Consistent
+
+A backup that is made via Volume Snapshots (clone).  A crash consistent backups is one where the files are all backed up to the exact same moment in time.
+
+### Ephemeral Storage
+
+Local storage that does not survive instance termination.
+
+## IOPS
+
+Input/Output Operations Per Second.  A Performance metric for storage.
+
+## Latency
+
+The amount of time required to service a request.  < 1 millisecond for NVMe
+
+### NVMe
+
+Non-Volatile Memory Express.  Fast SSD that is attached directly to the PCIe bus.
+
+### PCIe
+
+Peripheral Component Interconnect Express bus
+
+### Persistant Storage
+
+Persistant storage that survives instance termination
+
+### Volume Groups
+
+A grouping of Boot and Block Volumes that can be operated on as a group, such as with backups and clones.
+
