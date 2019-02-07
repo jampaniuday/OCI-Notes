@@ -29,19 +29,19 @@ A compute instance (eg Linux) running on a hypervisor.
 
 ---
 
-## Infrastructure Architecture
+## Infrastructure Architectures
 
 ### Availability Domain (AD)
 
 Fully Independent Datacenters within a Region 
 See Fault Domain
 
-## Fault Domain (FD)
+### Fault Domain (FD)
 
 Localized independent HW and Infrastructure within a Domain
 See Availability Domain
 
-## Region
+### Region
 
 Geographical Data Center Location
 
@@ -72,6 +72,12 @@ This is a unique identifier
 Any cloud object created in OCI
 
 Each OCI Resource is identified by a unique OCID
+
+### Tagging
+
+Resource tags can be used to easily identify related resources.
+
+See [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm "Resource Tags")
 
 ### Tenancy
 
@@ -266,7 +272,7 @@ The Principal may be a User Account or an Application
 
 Block Volumes and Local Storage on OCI are NVMe based and are organized into 4k blocks.
 
-## Boot Volume
+### Boot Volume
 
 Boot Volumes persist instance termination, and may be used to start a new instance, or to stop an instance, scale it larger and restart.
 
@@ -274,7 +280,7 @@ Boot Volumes persist instance termination, and may be used to start a new instan
 
 Block Volumes may be cloned via disk to disk copy.
 
-## Crash Consistent
+### Crash Consistent
 
 A backup that is made via Volume Snapshots (clone).  A crash consistent backups is one where the files are all backed up to the exact same moment in time.
 
@@ -282,13 +288,21 @@ A backup that is made via Volume Snapshots (clone).  A crash consistent backups 
 
 Local storage that does not survive instance termination.
 
-## IOPS
+### FSS
+
+File System Service - NFSv3 Compatible
+
+### IOPS
 
 Input/Output Operations Per Second.  A Performance metric for storage.
 
-## Latency
+### Latency
 
 The amount of time required to service a request.  < 1 millisecond for NVMe
+
+### Mount Targets
+
+An OCI Object created in an AD: it is used to control access to up to 100 FSS.
 
 ### NVMe
 
