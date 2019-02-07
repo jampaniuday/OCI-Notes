@@ -40,6 +40,17 @@ $0.0425 GB/Month, measured hourly & billed monthly
 
 Yes, via FastConnect or IPsec VPN.
 
+## Ports
+
+These ports must be open for the client to access the FSS.
+
+Type | Source CIDR | Protocol | Source Port | Dest Port
+-----|-------------|----------|-------------|----------
+Ingress | 10.0.0.0/24 | TCP | All | 2048-2050
+Ingress | 10.0.0.0/24 | TCP | All | 111
+Ingress | 10.0.0.0/24 | UDP | All | 2048
+Ingress | 10.0.0.0/24 | UDP | All | 111
+
 ## Security
 
 Security layer | Component | Controls this
@@ -55,16 +66,27 @@ If managed with Security Lists then the client has access to all or none FSS.
 
 Using Export Options instead can allow access per FSS.
 
-##  Ports
+Example exports from CLI.
+First is RW from 10.0.0.0/24
+Second is RO from 10.0.1.0/24
 
-These ports must be open for the client to access the FSS.
+```bash
+oci fs export update --export-id <FS_A_export_ID> --export-options '[{"source":"10.0.0.0/24 ","require-privileged-source-port":"true","access":"READ_WRITE","identity-squash":"NONE","anonymous-uid":"65534","anonymous-gid":"65534"}]'
 
-Type | Source CIDR | Protocol | Source Port | Dest Port
------|-------------|----------|-------------|----------
-Ingress | 10.0.0.0/24 | TCP | All | 2048-2050
-Ingress | 10.0.0.0/24 | TCP | All | 111
-Ingress | 10.0.0.0/24 | UDP | All | 2048
-Ingress | 10.0.0.0/24 | UDP | All | 111
+
+oci fs export update --export-id <FS_B_export_ID> --export-options '[{"source":"10.0.1.0/24 ","require-privileged-source-port":"true","access":"READ_ONLY","identity-squash":"NONE","anonymous-uid":"65534","anonymous-gid":"65534"}]'
+
+```
+
+NOTE: We recommend not to pass mount options to achieve best performance with File Storage Service. This approach leaves it to the client and server to negotiate the window size for Read & Write operations.
+
+## Snapshots
+
+- Read-only, space efficient, point-in-time backup of a file system
+- located in /.snapshot
+- 10,000 snapshots per file system
+- restore with cp or rsync
+  - eg. cp -r .snapshot/snapshot_name/* destination_directory_name
 
 ## Summary Address
 
