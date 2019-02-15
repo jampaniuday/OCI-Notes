@@ -5,6 +5,8 @@ OCI Networking Details
 
 ---
 
+## Routing and Naming
+
 ### BPG
 
 Border Gateway Protocol
@@ -53,19 +55,6 @@ A direct and private connection between OCI and your non-OCI Data Center.
 
 The connection can be 1G of 10G.
 
-
-## IP Ranges
-
-Recommendations as per RFC 1918
-
-- 10.0.0.0/8
-- 172.16/12
-- 192.168/16
-
-Allowable OCI VCN size range is from /16 to /30
-
-ed.  This seems to conflict with instructions to use RFC 1918, as the largest OCI VCN supported is /16
-
 ### Internet Gateway
 
 Only 1 Internet Gateway is allowed per VCN
@@ -91,6 +80,39 @@ A subnet can route traffic to only 1 NAT Gateway.
 
 A Gateway is not required to access Public OCI Services such as Object Storage - see Service Gateway
 
+## Route Tables
+
+Route traffic out of the VCN
+
+There is one Route Table per subnet.
+
+It is used only when the destination is not within current CIDR block.
+
+Routing Rules consist of:
+
+- Destination CIDR block
+- Route Target (the next hop) for the traffic that matches that CIDR
+
+### Service Gateway
+
+Service Gateway traffic never traverses the internet (are there any exceptions?)
+
+This traffic is on the OCI Fabric
+
+## IP Addressing
+
+### IP Ranges
+
+Recommendations as per RFC 1918
+
+- 10.0.0.0/8
+- 172.16/12
+- 192.168/16
+
+Allowable OCI VCN size range is from /16 to /30
+
+ed.  This seems to conflict with instructions to use RFC 1918, as the largest OCI VCN supported is /16
+
 ### Public IP Address
 
 An IP address that can be routed on the internet.
@@ -113,8 +135,7 @@ Several OCI objects or services can have a Public IP Address.
 
 Public IP Addresses are assigned by Oracle and cannot be changed.
 
-
-### Remote Peering Connectin
+### Remote Peering Connection
 
 An RPC is used to connect two VCNs in the different regions.
 
@@ -139,18 +160,7 @@ These are networking standards.
 
 Where LAST is the final address in a subnet range (not necessarily 255)
 
-## Route Tables
-
-Route traffic out of the VCN
-
-There is one Route Table per subnet.
-
-It is used only when the destination is not within current CIDR block.
-
-Routing Rules consist of:
-
-- Destination CIDR block
-- Route Target (the next hop) for the traffic that matches that CIDR
+## General Network
 
 ### Security Lists
 
@@ -180,13 +190,15 @@ Stateless is better for any service or app generating a large number of connecti
 
 ie. Load Balancers, Analytic queries with many connections, etc.
 
-### Service Gateway
+### SR-IOV
 
-Service Gateway traffic never traverses the internet (are there any exceptions?)
+Single-Root I/O Virtualization
 
-This traffic is on the OCI Fabric
+An optimization to improve networking performance with PCIe devices
 
-## Subnets
+[What is SR-IOV?](https://blog.scottlowe.org/2009/12/02/what-is-sr-iov/ "What is SR-IOV?")
+
+### Subnets
 
 Subnets are contained within an AD (Availability Domain)
 
@@ -204,7 +216,7 @@ There are 2 types of VCN Peering:
 - local VCN Peering
 - remote VCN Peering
 
-## VPN
+### VPN
 
 Virtual Private Network
 

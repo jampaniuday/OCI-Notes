@@ -29,11 +29,17 @@ A compute instance (eg Linux) running on a hypervisor.
 
 ---
 
+## Database
+
+OCI Database Services (not necessarily just Oracle DB)
+
+---
+
 ## Infrastructure Architectures
 
-### Availability Domain (AD)
+-### Availability Domain (AD)
 
-Fully Independent Datacenters within a Region 
+Fully Independent Datacenters within a Region
 See Fault Domain
 
 ### Fault Domain (FD)
@@ -110,6 +116,12 @@ A direct and private connection between OCI and your non-OCI Data Center.
 ### FQDN
 
 Fully Qualified Domain Name
+
+### Load Balancer
+
+The OCI Load Balancing Service - distribute the load of incoming requests among 2 or more servers.
+
+Chief Benefits are Scaling and High Availability
 
 ### Local Peering Gateway
 
@@ -234,7 +246,7 @@ Can only be 'allowed'  to Groups - not to Users
 
 Policies can be attached to Compartments or the Tenancy (ed. may need revision)
 
-Format: _Allow <subject> to <verb> <resource-type> in <location> where <conditions>_
+Format: _Allow \<subject\> to \<verb\> \<resource-type\> in \<location\> where \<conditions\>_
 
 Verbs:
 
@@ -323,4 +335,3 @@ Persistant storage that survives instance termination
 ### Volume Groups
 
 A grouping of Boot and Block Volumes that can be operated on as a group, such as with backups and clones.
-
