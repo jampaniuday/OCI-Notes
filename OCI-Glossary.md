@@ -214,7 +214,7 @@ OCI has two options for IPsec VPN connectivity
 
 ## Security
 
-Be default, everything is denied.  There are no default privileges
+By default, everything is denied.  There are no default privileges
 
 ### Compartments
 

@@ -4,6 +4,7 @@ Notes for OCI - Oracle Cloud Infrastructure
 
 [OCI Glossary](https://github.com/jkstill/OCI-Notes/blob/master/OCI-Glossary.md "OCI Glossary")
 
+[OCI Region Architecture](https://github.com/jkstill/OCI-Notes/blob/master/oci-region.architecture.txt "OCI Region Architecture"))
 ___
 
 [DB Service](https://github.com/jkstill/OCI-Notes/blob/master/DB-Service.md "DB Service")
