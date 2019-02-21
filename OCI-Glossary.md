@@ -37,7 +37,7 @@ OCI Database Services (not necessarily just Oracle DB)
 
 ## Infrastructure Architectures
 
--### Availability Domain (AD)
+### Availability Domain (AD)
 
 Fully Independent Datacenters within a Region
 See Fault Domain
@@ -56,6 +56,10 @@ See Availability Domain and Fault Domain
 ---
 
 ## General
+
+### Billing
+
+Both Soft (generate alert) and Hard (no new services, current services suspended) limits can be set per Service Category.
 
 ### DBMS_Cloud
 
@@ -216,6 +220,7 @@ OCI has two options for IPsec VPN connectivity
 
 By default, everything is denied.  There are no default privileges
 
+
 ### Compartments
 
 A collection of OCI Resources.
@@ -225,6 +230,12 @@ A Tenancy has a _Root_ compartment initially by default.
 ### Groups
 
 Collection of users that need same type of access to a Resource or set of Resources
+
+### HSM
+
+Hardware device dedicated to key management
+
+[Hardware Security Module](https://en.wikipedia.org/wiki/Hardware_security_module "Hardware Security Module")
 
 ### IAM
 
@@ -237,6 +248,10 @@ Identity Provider - used at sign in to the console. This is Oracle Identity Clou
 ### Instance Principals
 
 Instance Principals allows instances (and applications) to make API calls against other OCI services removing the need to configure user credentials or a configuration file
+
+### KSM
+
+[KMS FAQ - Key Management Service](https://cloud.oracle.com/cloud-security/kms/faq "KMS - Key Management Service")
 
 ### Policies
 

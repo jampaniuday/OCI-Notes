@@ -15,6 +15,8 @@ This is the protocol used to route traffic on the backbone between networks.
 
 ### DNS Domain Name System
 
+Also see [DNS](https://github.com/jkstill/OCI-Notes/blob/master/Net-DNS.md "DNS")
+
 OCI uses its own Internal DNS
 
 Options:
