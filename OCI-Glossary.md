@@ -251,7 +251,7 @@ Identity Provider - used at sign in to the console. This is Oracle Identity Clou
 
 Instance Principals allows instances (and applications) to make API calls against other OCI services removing the need to configure user credentials or a configuration file
 
-### KSM
+### KMS
 
 [KMS FAQ - Key Management Service](https://cloud.oracle.com/cloud-security/kms/faq "KMS - Key Management Service")
 

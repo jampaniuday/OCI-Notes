@@ -33,7 +33,7 @@ A Boot Volume is the storage for the image used to boot an instance.
 
 It is used for both Bare Metal and Virtual Machines.
 
-- Boot volume is created automated and associated with an instance until you terminate the instance
+- Boot volume is created automatically and associated with an instance until you terminate the instance
 - Boot volumes are encrypted, have faster performance, lower launch times, and higher durability for BM and VM instances
 - Compute instance can be scaled to a larger shape by using boot volumes
 - You can preserve the boot volume when you terminate a compute instance
@@ -109,6 +109,6 @@ This Instance Configuration serves as a template to launch an instance.
 
 A Pool allows provising and creating multiple instances based on the same Instance Configuration
 
-Pool:Congiguration is 1:1
+Pool:Configuration is 1:1
 
 A single Configuration may be used on multiple pools.

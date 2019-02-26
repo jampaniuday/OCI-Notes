@@ -67,7 +67,7 @@ A Gateway is not required to access Public OCI Services such as Object Storage -
 
 An LPG is used to connect two VCNs in the same region.
 
-An LGP is not a standalone object.  Each of the VCNs to be connected must have and LPG.
+An LPG is not a standalone object.  Each of the VCNs to be connected must have an LPG.
 
 The LPGs cannot have overlapping CIDR blocks.
 
@@ -141,7 +141,7 @@ Public IP Addresses are assigned by Oracle and cannot be changed.
 
 An RPC is used to connect two VCNs in the different regions.
 
-An RGP is not a standalone object; it is created on a Dynamic Routing Gateway (DRG)
+An RGP (Remote Peering Gateway) is not a standalone object; it is created on a Dynamic Routing Gateway (DRG)
 
 The RPCs cannot have overlapping CIDR blocks.
 
