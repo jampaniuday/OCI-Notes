@@ -166,11 +166,13 @@ Where LAST is the final address in a subnet range (not necessarily 255)
 
 ### Security Lists
 
-Firewall rules per subnet allowing/disallowing network  egress/ingress from the subnet
+Security Lists are a lists of firewall security rules that belong to a VCN
+
+Security lists can be applied to one or more subnets,  allowing/disallowing network  egress/ingress from the subnet
 
 Security Lists manage connectivity north-south (incoming/outgoing VCN traffic) and east-west (internal VCN traffic between multiple subnets)
 
-Each subnet may have up to 5 security lists via the Route Table.
+Each subnet may have up to 5 security lists.
 
 OCI follows a white-list model (you must manually specify white listed traffic flows); By default, things are locked down 
 

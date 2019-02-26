@@ -182,7 +182,9 @@ Route Traffic out of the VCN
 
 ### Security Lists
 
-Firewall rules per subnet allowing/disallowing network  egress/ingress from the subnet
+Security Lists are a lists of firewall security rules that belong to a VCN
+
+Security lists can be applied to  subnet allowing/disallowing network  egress/ingress from the subnet
 
 Rules may be Stateful or Stateless
 
