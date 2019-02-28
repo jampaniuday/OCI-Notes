@@ -164,6 +164,15 @@ Where LAST is the final address in a subnet range (not necessarily 255)
 
 ## General Network
 
+### Route Tables
+
+Rules to show how traffic can be routed _out_ of the VCN
+
+A Route Table is not required for instances within the same CIDR block.
+
+A Route Table may be attached to multiple subnets, but each subnet can have only 1 Route Table.
+
+
 ### Security Lists
 
 Security Lists are a lists of firewall security rules that belong to a VCN
@@ -205,6 +214,11 @@ An optimization to improve networking performance with PCIe devices
 ### Subnets
 
 Subnets are contained within an AD (Availability Domain)
+
+Each Subnet may have up to:
+
+- 5 Security Lists attached
+- 1 Route Table attached
 
 Private: instances contain private IP addresses assigned to vNICs
 
