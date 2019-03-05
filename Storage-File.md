@@ -30,6 +30,11 @@ Place FSS in its own subnet.
 
 IP Addresses are assigned automatically to FSS and cannot be edited.
 
+FSS requires 3 addresses
+
+- 2 addresses for mount point creation
+- 1 address for HA
+
 Do not use a CIDR of less than /29, as /30 leaves only 1 address (OCI reserves 3 addresses)
 
 ## Cost

@@ -83,6 +83,22 @@ Any cloud object created in OCI
 
 Each OCI Resource is identified by a unique OCID
 
+Resource Locations:
+
+- Global
+  - IAM
+  - Key Vaults, Keys
+  - DNS
+- Availability Domain (AD)
+  - Subnet
+  - Compute instances
+  - Block Volume
+  - DB Systems
+  - File System (and Mount Target)
+  - Ephemeral Public IPs
+- Regional
+  - Everything else!
+
 ### Tagging
 
 Resource tags can be used to easily identify related resources.
@@ -100,6 +116,12 @@ When you sign up for Oracle Cloud Infrastructure, Oracle creates a tenancy for y
 ### BPG
 
 Border Gateway Protocol
+
+### Console Connection
+
+An SSH or VNC connection made directly to a compute instance, even if that instance is not normally directly available via SSH.
+
+The connection must be manually created via the UI or CLI, and will available for only 24 hours.
 
 ### CPE
 

@@ -41,6 +41,32 @@ It is used for both Bare Metal and Virtual Machines.
 - Boot volumes cannot be detached from a running instance
 - Possible to take a manual backup, assign backup policy or create clone of boot volumes
 
+## Console Connection
+
+An SSH or VNC connection made directly to a compute instance, even if that instance is not normally directly available via SSH.
+
+The connection must be manually created via the UI or CLI, and will available for only 24 hours.
+
+[SSH Serial Connection](https://docs.cloud.oracle.com/iaas/Content/Compute/References/serialconsole.htm)
+
+SSH Serial Commands
+
+When using SSH, the ~ character at the beginning of a new line is used as an escape character.
+
+    To exit the serial console, enter:
+
+    ~.
+
+    To suspend the SSH session, enter:
+
+    ~^z
+
+    The ^ character represents the CTRL key
+
+    To see all the SSH escape commands, enter:
+
+    ~?
+
 ## Instance Life Cycle
 
 Terms:
