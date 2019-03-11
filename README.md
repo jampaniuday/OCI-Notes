@@ -20,5 +20,6 @@ ___
 
 [Terraform](https://github.com/jkstill/OCI-Notes/blob/master/Terraform.md)
 
+CLI
 
 
