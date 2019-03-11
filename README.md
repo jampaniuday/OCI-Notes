@@ -18,7 +18,7 @@ ___
 
 [OCI Storage](https://github.com/jkstill/OCI-Notes/blob/master/Storage.md "Storage")
 
-
+[Terraform](https://github.com/jkstill/OCI-Notes/blob/master/Terraform.md)
 
 
 
